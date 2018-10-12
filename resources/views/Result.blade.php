@@ -5,13 +5,26 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">STUDENT ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">HSC ROLL</th>
+                <th scope="col">MERIT POSITION</th>
             </tr>
             </thead>
             <tbody>
+
+            {{$i = 1}}
+                @foreach($results as $res)
+
+                <tr>
+                    <td>{{$res->id}}</td>
+                    <td>{{$res->student_name}}</td>
+                    <td>{{$res->hsc_roll}}</td>
+                    <td>{{$i++}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+            <!--<tbody>
             <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
@@ -30,7 +43,7 @@
                 <td>the Bird</td>
                 <td>@twitter</td>
             </tr>
-            </tbody>
+            </tbody>-->
         </table>
     </div>
 @endsection

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Student Details</div>
+                <div class="card-header">Enter Student Details</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -91,6 +91,9 @@
                         </form>
                 </div>
             </div>
+        </div>
+        <div class="links">
+            <a href="{{url('/details')}}">Students Details</a>
         </div>
     </div>
 </div>

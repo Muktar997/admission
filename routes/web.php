@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/student_details','Entrycontroller@student_details');
-Route::get('/result', 'Entrycontroller@result');
+Route::get('/result', 'MeritpositionController@result');
+Route::get('/details', 'ShowStudentDetailsController@details');

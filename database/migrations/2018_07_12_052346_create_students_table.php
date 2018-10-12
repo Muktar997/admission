@@ -27,6 +27,7 @@ class CreateStudentsTable extends Migration
             $table->double('total_marks');
             $table->timestamps();
         });
+
     }
 
     /**

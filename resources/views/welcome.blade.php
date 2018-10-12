@@ -65,17 +65,20 @@
         </style>
     </head>
     <body>
+    <div class="content">
+    <b><font size="6" color="blue">Hello World</font></b>
+    </div>
         <div class="flex-center position-ref full-height">
 
             <div class="content">
                 <div class="title m-b-md">
-                    Admission Result
+                    <b><font color="green"> RUET</font><font size="6" color="red"> Admission Result</font></b>
                 </div>
 
                 <div class="links">
-                    <a href="{{url('/home')}}">Home</a>
-                    <a href="{{url('/login')}}">Admin</a>
-                    <a href="{{url('/result')}}">Student Result</a>
+                    <!--<a href="{{url('/home')}}">Home</a>-->
+                    <a href="{{url('/login')}}"><font size="4" color="#00bfff"> <u>Admin</u></font></a>
+                    <a href="{{url('/result')}}"><font size="4" color="#00bfff"><u>Student Result</u></font></a>
                 </div>
             </div>
         </div>

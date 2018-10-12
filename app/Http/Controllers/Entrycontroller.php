@@ -22,11 +22,7 @@ class Entrycontroller extends Controller
         $student->total_marks = $request->math+$request->physics+$request->chemistry+$request->english;
         $student->save();
         return back();
+
     }
-    public function result()
-    {
-        $results = DB ::select("SELECT student_name,hsc_roll,total_marks FROM students ORDER BY total_marks DESC");
-        dd($results);
-        return view ('Result');
-    }
+
 }
