@@ -93,7 +93,10 @@
             </div>
         </div>
         <div class="links">
-            <a href="{{url('/details')}}">Students Details</a>
+            <a href="{{url('/details')}}">
+                <button type="details" class="btn btn-primary">
+                    Student Details
+                </button><!--<font size="6" color="red"><u><i>Student Details</i></u></font></a>-->
         </div>
     </div>
 </div>

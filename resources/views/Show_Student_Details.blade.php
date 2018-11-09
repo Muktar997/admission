@@ -15,6 +15,7 @@
                 <th scope="col">Chemistry</th>
                 <th scope="col">English</th>
                 <th scope="col">Total Marks</th>
+                <th scope="col">Merit Position</th>
             </tr>
             </thead>
             <tbody>
@@ -31,6 +32,7 @@
                     <td>{{$student->chemistry}}</td>
                     <td>{{$student->english}}</td>
                     <td>{{$student->total_marks}}</td>
+                    <td>{{$student->Merit_position}}</td>
 
                 </tr>
             @endforeach

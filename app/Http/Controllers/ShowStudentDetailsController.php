@@ -10,7 +10,12 @@ class ShowStudentDetailsController extends Controller
     //
     public function details()
     {
-        $student_details = DB ::select("SELECT id,student_name,hsc_roll,reg_number,session,math,physics,chemistry,english,total_marks FROM students ORDER BY id");
+        $student_details = DB ::select("SELECT * FROM students ORDER BY id");
         return view ('Show_Student_Details',compact('student_details'));
+    }
+    public function individual(Request $request)
+    {
+        $student_details = DB ::select("SELECT * FROM students WHERE id='$request->roll'AND hsc_roll='$request->hsc_roll' AND reg_number='$request->reg_no'");
+        return view ('individual_details',compact('student_details'));
     }
 }

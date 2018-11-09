@@ -65,20 +65,33 @@
         </style>
     </head>
     <body>
-    <div class="content">
+    <!--<div class="content">
     <b><font size="6" color="blue">Hello World</font></b>
-    </div>
+    </div>-->
+   <!-- <img src="../../public/ruet.PNG" alt="RUET" style="width:128px;height:128px;">-->
         <div class="flex-center position-ref full-height">
 
             <div class="content">
                 <div class="title m-b-md">
-                    <b><font color="green"> RUET</font><font size="6" color="red"> Admission Result</font></b>
+                    <b><font color="green"> RUET</font></b>
+                    <b><font size="8" color="red"> Admission Test Result</font></b>
                 </div>
 
                 <div class="links">
                     <!--<a href="{{url('/home')}}">Home</a>-->
-                    <a href="{{url('/login')}}"><font size="4" color="#00bfff"> <u>Admin</u></font></a>
-                    <a href="{{url('/result')}}"><font size="4" color="#00bfff"><u>Student Result</u></font></a>
+                    <a href="{{url('/login')}}">
+                        <button type="admin" class="btn btn-primary">
+                            ADMIN
+                        </button>
+                        <!--<a href="{{url('/register')}}"><font size="4" color="green"> <u><i>Register</i></u></font></a>-->
+                        <a href="{{url('/result')}}">
+                            <button type="result" class="btn btn-primary">
+                                All Student Result
+                            </button>
+                            <a href="{{url('/individual')}}">
+                                <button type="result" class="btn btn-primary">
+                                    Individual Result
+                                </button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         <table class="table">
@@ -13,15 +12,13 @@
             </thead>
             <tbody>
 
-                @foreach($student_details as $res)
-
                 <tr>
-                    <td>{{$res->id}}</td>
-                    <td>{{$res->student_name}}</td>
-                    <td>{{$res->hsc_roll}}</td>
-                    <td>{{$res->Merit_position}}</td>
+                    <td>{{$student_details[0]->id}}</td>
+                    <td>{{$student_details[0]->student_name}}</td>
+                    <td>{{$student_details[0]->hsc_roll}}</td>
+                    <td>{{$student_details[0]->Merit_position}}</td>
                 </tr>
-                @endforeach
+
             </tbody>
             <!--<tbody>
             <tr>

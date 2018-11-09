@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/student_details','Entrycontroller@student_details');
 Route::get('/result', 'MeritpositionController@result');
 Route::get('/details', 'ShowStudentDetailsController@details');
+Route::get('/individual_result', 'ShowStudentDetailsController@individual');
+Route::get('/individual', function (){
+    return view('Individual');
+});
