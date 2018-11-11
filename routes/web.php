@@ -25,3 +25,6 @@ Route::get('/individual_result', 'ShowStudentDetailsController@individual');
 Route::get('/individual', function (){
     return view('Individual');
 });
+Route::get('ExportClients','ExcelController@ExportClients');
+Route::get('upload','ExcelController@upload');
+Route::get('ImportClients','ExcelController@ImportClients');

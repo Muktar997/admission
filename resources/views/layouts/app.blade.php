@@ -19,6 +19,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+            background-repeat: repeat-x;
+        }
+        part {
+            background-color: lightcyan;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

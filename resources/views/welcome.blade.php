@@ -63,35 +63,54 @@
                 margin-bottom: 30px;
             }
         </style>
+        <style>
+            body {
+                background-color: lightblue;
+                background-repeat: repeat-x;
+            }
+            part {
+                background-color: lightyellow;
+            }
+        </style>
+
     </head>
     <body>
     <!--<div class="content">
     <b><font size="6" color="blue">Hello World</font></b>
     </div>-->
-   <!-- <img src="../../public/ruet.PNG" alt="RUET" style="width:128px;height:128px;">-->
+   <!--<img src="ruet.PNG" alt="RUET" style="width:128px;height:128px;">-->
         <div class="flex-center position-ref full-height">
-
             <div class="content">
                 <div class="title m-b-md">
-                    <b><font color="green"> RUET</font></b>
+                   <part><b><font color="green"> RUET</font></b></part> <br>
                     <b><font size="8" color="red"> Admission Test Result</font></b>
                 </div>
-
                 <div class="links">
-                    <!--<a href="{{url('/home')}}">Home</a>-->
-                    <a href="{{url('/login')}}">
-                        <button type="admin" class="btn btn-primary">
-                            ADMIN
-                        </button>
-                        <!--<a href="{{url('/register')}}"><font size="4" color="green"> <u><i>Register</i></u></font></a>-->
-                        <a href="{{url('/result')}}">
-                            <button type="result" class="btn btn-primary">
-                                All Student Result
+                <div class="form-group row mb-0">
+                    <div class="col-md-6 offset-md-4">
+                        <a href="{{url('/login')}}">
+                            <button type="button" class="btn btn-primary">
+                                <b><font size="4" color="blue">  ADMIN</font></b>
                             </button>
-                            <a href="{{url('/individual')}}">
-                                <button type="result" class="btn btn-primary">
-                                    Individual Result
-                                </button>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-md-6 offset-md-4">
+                        <a href="{{url('/result')}}">
+                            <button type="button" class="btn btn-primary">
+                                <b><font size="4" color="blue">  All Student Result</font></b>
+                            </button>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-md-6 offset-md-4">
+                        <a href="{{url('/individual')}}">
+                            <button type="button" class="btn btn-primary">
+                                <b><font size="4" color="blue">  Individual Result</font></b>
+                            </button>
+                    </div>
+                </div>
+
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right">Your HSC Roll</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="text" class= "form-control" name="hsc_roll" value="{{ old('email') }}" required>
+                                    <input id="email" type="text" class= "form-control" name="hsc_roll" required>
 
 
                                 </div>
@@ -57,12 +57,12 @@
                     </div>
                 </div>
             </div>
-            <div class="links">
+            <!--<div class="links">
                 <a href="{{url('/details')}}">
                     <button type="details" class="btn btn-primary">
                         Student Details
                     </button><!--<font size="6" color="red"><u><i>Student Details</i></u></font></a>-->
-            </div>
+            </div> -->
         </div>
     </div>
 @endsection
