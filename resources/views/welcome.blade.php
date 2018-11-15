@@ -67,6 +67,8 @@
             body {
                 background-color: lightblue;
                 background-repeat: repeat-x;
+                background-image: url("Sgate.jpg");
+
             }
             part {
                 background-color: lightyellow;
@@ -78,41 +80,32 @@
     <!--<div class="content">
     <b><font size="6" color="blue">Hello World</font></b>
     </div>-->
-   <!--<img src="ruet.PNG" alt="RUET" style="width:128px;height:128px;">-->
-        <div class="flex-center position-ref full-height">
+   <!--<img src="../../public/ruet.PNG" alt="RUET" style="width:128px;height:128px;">
+     <div class="flex-center position-ref full-height"> </div><img src="{{ URL::to('http://localhost/admission/public/img/ruet.PNG') }}"><img src="ruet.PNG" alt="RUET" width="1350" height="150"><br>-->
+
+
             <div class="content">
-                <div class="title m-b-md">
-                   <part><b><font color="green"> RUET</font></b></part> <br>
-                    <b><font size="8" color="red"> Admission Test Result</font></b>
+                <img src="ruet.PNG" alt="RUET" width="1350" height="150"><br>
+                <div class="title m-b-md"><b><font size="7" color="wheat">RUET Admission Test Result</font></b><br>
                 </div>
-                <div class="links">
+                <!--<div class="links"></div>-->
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <a href="{{url('/login')}}">
                             <button type="button" class="btn btn-primary">
-                                <b><font size="4" color="blue">  ADMIN</font></b>
+                                <b><font size="2" color="red">  ADMIN</font></b>
                             </button>
-                    </div>
-                </div>
-                <div class="form-group row mb-0">
-                    <div class="col-md-6 offset-md-4">
                         <a href="{{url('/result')}}">
                             <button type="button" class="btn btn-primary">
-                                <b><font size="4" color="blue">  All Student Result</font></b>
+                                <b><font size="2" color="red">  All Student Result</font></b>
                             </button>
-                    </div>
-                </div>
-                <div class="form-group row mb-0">
-                    <div class="col-md-6 offset-md-4">
                         <a href="{{url('/individual')}}">
                             <button type="button" class="btn btn-primary">
-                                <b><font size="4" color="blue">  Individual Result</font></b>
+                                <b><font size="2" color="red">  Individual Result</font></b>
                             </button>
                     </div>
                 </div>
-
-                </div>
             </div>
-        </div>
+
     </body>
 </html>

@@ -24,12 +24,14 @@ class ExcelController extends Controller
     {
         $file = Input::file('file');
         $file_name = $file->getClientOriginalName();
-        $file->move('files',$file_name);
-        $results = Excel::load('files/'.$file_name,function ($reader)
-        {
-            $reader->all();
-        })->get();
+        $file->move(public_path('uploads',$file_name));
+        Excel::load(Input::file(public_path('uploads/' . $file_name)), function ($reader) {
 
-        return view('clients',compact($results));
+            foreach ($reader->toArray() as $row) {
+                echo $row;
+            }
+        });
+
+        return "";
     }
 }

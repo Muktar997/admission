@@ -23,10 +23,11 @@
         body {
             background-color: lightgoldenrodyellow;
             background-repeat: repeat-x;
+
         }
-        part {
-            background-color: lightcyan;
-        }
+
+
+
     </style>
 </head>
 <body>

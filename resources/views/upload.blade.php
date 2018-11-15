@@ -5,7 +5,7 @@
     <title>upload</title>
 </head>
 <body>
-<form action="ImportClients" method="post" enctype="multipart/form-data">
+<form action="import" method="post" enctype="multipart/form-data">
     <label>Upoload file : </label><br>
     <input type="file" name="file"/><br>
     <input type="hidden" value="{{csrf_token()}}" name="_token"/>
