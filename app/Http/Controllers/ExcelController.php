@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use Illuminate\Http\Request;
 use Excel;
 use Illuminate\Support\Facades\Input;
@@ -23,12 +24,27 @@ class ExcelController extends Controller
     public function ImportClients()
     {
         $file = Input::file('file');
-        $file_name = $file->getClientOriginalName();
-        $file->move(public_path('uploads',$file_name));
-        Excel::load(Input::file(public_path('uploads/' . $file_name)), function ($reader) {
+        $file->move(base_path('upls'),$file->getClientOriginalName());
+
+
+
+        Excel::load(base_path('upls/' . $file->getClientOriginalName()), function ($reader) {
 
             foreach ($reader->toArray() as $row) {
-                echo $row;
+                $std = new Student();
+                $std->student_name = $row['name'];
+                $std->hsc_roll = $row['hsc_roll'];
+                $std->reg_number = $row['reg_no'];
+                $std->session = $row['session'];
+                $std->math = $row['math'];
+                $std->physics = $row['physics'];
+                $std->chemistry = $row['chemistry'];
+                $std->english = $row['english'];
+
+                $total = (int)$row['physics'] + (int)$row['math'] + (int)$row['chemistry'] + (int)$row['english'];
+                $std->total_marks = $total;
+                $std->save();
+                echo var_dump($row);
             }
         });
 
