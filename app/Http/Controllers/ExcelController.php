@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Student;
 use Illuminate\Http\Request;
 use Excel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 class ExcelController extends Controller
@@ -44,10 +45,20 @@ class ExcelController extends Controller
                 $total = (int)$row['physics'] + (int)$row['math'] + (int)$row['chemistry'] + (int)$row['english'];
                 $std->total_marks = $total;
                 $std->save();
-                echo var_dump($row);
+
+                $results = DB::select("SELECT id,student_name,hsc_roll,total_marks FROM students ORDER BY total_marks DESC,math DESC,physics DESC,chemistry DESC,english DESC");
+
+                $i=1;
+                foreach ($results as $student) {
+                    $cur_student=Student::find($student->id);
+                    $cur_student->Merit_position=$i;
+                    $cur_student->save();
+                    $i++;
+                }
+                //echo var_dump($row);
             }
         });
 
-        return "";
+        return redirect("result");
     }
 }

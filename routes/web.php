@@ -26,6 +26,6 @@ Route::get('/individual', function (){
     return view('Individual');
 });
 Route::get('ExportClients','ExcelController@ExportClients');
-Route::get('upload','ExcelController@upload');
+Route::get('/upload','ExcelController@upload')->name("upload");
 Route::post('import','ExcelController@ImportClients');
 Route::get('export','ContactController@contactExport')->name('contact.export');
