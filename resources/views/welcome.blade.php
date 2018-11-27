@@ -90,20 +90,19 @@
 <!--<div class="content">
 <b><font size="6" color="blue">Hello World</font></b>
 </div>-->
-<!--<img src="../../public/ruet.PNG" alt="RUET" style="width:128px;height:128px;">
+<!--<img src="../../public/ruet.PNG" alt="RUET" style="width:128px;height:128px;" +"      "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))>
      <div class="flex-center position-ref full-height"> </div><img src="{{ URL::to('http://localhost/admission/public/img/ruet.PNG') }}"><img src="ruet.PNG" alt="RUET" width="1350" height="150"><br>-->
 
 
 <div class="content">
 
-    <img src="ruet.PNG" alt="RUET" class="img_ruet" width="1400" height="175">
-
+    <img src="ruet.PNG" alt="RUET" class="img_ruet" width="1400" height="150">
     <marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-
-
-        <b><font size="6" color="red">RUET Admission Test Result</font></b>
+        <b><font size="5" color="red">RUET Admission Test Result</font></b>
 
     </marquee>
+    <?php echo(strftime("%r (GMT)")); ?></p>
+    <?php echo(strftime("%d %b %Y ")); ?></p>
     <!--<img id="ver" src="ver.JPG">
 
 
@@ -133,14 +132,14 @@
                     <button type="button" class="btn btn-primary">
                         <b><font size="5" color="blue"> ADMIN</font></b>
                     </button>
-    </div>
-    <div class="links">
+    <!--</div>
+    <div class="links">-->
                     <a href="{{url('/result')}}">
                         <button type="button" class="btn btn-primary">
                             <b><font size="5" color="blue"> All Student Result</font></b>
                         </button>
-    </div>
-    <div class="links">
+    <!--</div>
+    <div class="links">-->
                         <a href="{{url('/individual')}}">
                             <button type="button" class="btn btn-primary">
                                 <b><font size="5" color="blue"> Individual Result</font></b>
@@ -172,7 +171,7 @@
 
     /* Slideshow container */
     .slideshow-container {
-        max-width: 600px;
+        max-width: 550px;
         position: relative;
         margin: auto;
     }

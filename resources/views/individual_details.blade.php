@@ -4,7 +4,7 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">STUDENT ID</th>
+                <th scope="col">Admission Roll</th>
                 <th scope="col">NAME</th>
                 <th scope="col">HSC ROLL</th>
                 <th scope="col">MERIT POSITION</th>
